@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_back"
+    >
+
+    <EditText
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/login_email_image"
+        android:textColor="#ffffffff"
+        android:drawablePadding="5dp"
+        android:hint="@string/email"
+        />
+
+
+    <EditText
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:drawablePadding="5dp"
+        android:textColor="#ffffffff"
+        android:layout_marginTop="80dp"
+        android:hint="@string/password"
+        android:drawableLeft="@drawable/login_password_image"
+        />
+
+    <ImageButton
+        android:layout_marginBottom="30dp"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:id="@+id/startMain"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/login_apibutton"
+        />
+
+
+</FrameLayout>

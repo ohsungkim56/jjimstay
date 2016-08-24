@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JJIMSTAY</string>
+
+
+    <string name="email">e-mail</string>
+    <string name="password">password</string>
+</resources>

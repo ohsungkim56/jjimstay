@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language">
+        <item>Korean</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="Relax">
+        <item></item>
+        <item>Relax</item>
+        <item>hkhkhk</item>
+    </string-array>
+
+    <string-array name="Active">
+        <item></item>
+        <item>Active</item>
+    </string-array>
+
+</resources>
