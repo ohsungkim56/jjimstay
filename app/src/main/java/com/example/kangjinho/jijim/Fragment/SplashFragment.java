@@ -20,11 +20,10 @@ public class SplashFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
-
         View layout = inflater.inflate(R.layout.fragment_spinner, container, false);
 
         mSpinner = (Spinner) layout.findViewById(R.id.spinnerLanguage);
+
 
 
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -34,10 +33,10 @@ public class SplashFragment extends Fragment {
                 Log.v("머이ㅑ", i+"");
                 switch (i) {
                     case 1:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new LoginFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.splashContainer, new LoginFragment()).commit();
                         break;
                     case 2:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new LoginFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.splashContainer, new LoginFragment()).commit();
                         break;
                 }
             }

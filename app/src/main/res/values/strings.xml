@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">JJIMSTAY</string>
-
+    <string name="search">Search</string>
 
     <string name="email">e-mail</string>
     <string name="password">password</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

@@ -5,25 +5,6 @@
     android:orientation="vertical">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/framgnet_actionbar_center">
-
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="20dp"
-            android:background="@drawable/fragment_navigation"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            />
-
-    </RelativeLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -47,7 +28,7 @@
                         android:layout_height="25dp"
                         android:layout_gravity="center"
                         android:background="@drawable/spinner_relax"
-                        android:entries="@array/Relax"></Spinner>
+                        android:entries="@array/Relax"/>
 
                 </FrameLayout>
 
@@ -63,21 +44,19 @@
                         android:layout_height="25dp"
                         android:background="@drawable/spinner_active"
                         android:layout_gravity="center"
-                        android:entries="@array/Active"></Spinner>
+                        android:entries="@array/Active"/>
                 </FrameLayout>
 
             </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/mainRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
             </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
 
 
-    </FrameLayout>
 
 </LinearLayout>

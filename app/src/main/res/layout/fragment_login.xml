@@ -29,7 +29,7 @@
         android:drawableLeft="@drawable/login_password_image"
         />
 
-    <ImageButton
+    <Button
         android:layout_marginBottom="30dp"
         android:layout_width="310dp"
         android:layout_height="60dp"
