@@ -1,7 +1,10 @@
 package com.example.kangjinho.jijim.Fragment;
 
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -25,9 +28,11 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_main, container, false);
         RecyclerView.Adapter mAdapter;
+        mAdapter = new RecyclerViewAdapter(layout.getContext(), dataList, R.layout.fragment_card);
 
 
         RecyclerView mRecyclerView = (RecyclerView) layout.findViewById(R.id.mainRecyclerView);
+        mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setHasFixedSize(true);
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(layout.getContext());
@@ -36,7 +41,6 @@ public class MainFragment extends Fragment {
         mRecyclerView.addOnItemTouchListener(new RecyclerViewOnItemClickListener(getActivity(), mRecyclerView, new RecyclerViewOnItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View v, final int position) {
-
                 getFragmentManager().beginTransaction().replace(R.id.mainContainer, new InfoFragment()).addToBackStack(null).commit();
             }
 
@@ -46,11 +50,8 @@ public class MainFragment extends Fragment {
         }
         ));
 
-        mAdapter = new RecyclerViewAdapter(layout.getContext(), dataList, R.layout.fragment_card);
-        mRecyclerView.setAdapter(mAdapter);
+
 
         return layout;
     }
-
-
 }

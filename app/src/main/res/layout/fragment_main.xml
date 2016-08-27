@@ -7,12 +7,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:baselineAligned="false"
                 android:weightSum="2">
 
@@ -52,10 +54,11 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/mainRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
             </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
+
 
 
 

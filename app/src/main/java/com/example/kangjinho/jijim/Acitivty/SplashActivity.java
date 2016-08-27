@@ -15,9 +15,5 @@ public class SplashActivity extends AppCompatActivity {
 
         if (savedInstanceState == null)
             getFragmentManager().beginTransaction().add(R.id.splashContainer, new SplashFragment()).commit();
-
-
     }
-
-
 }

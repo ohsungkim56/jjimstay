@@ -20,11 +20,23 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View layout = inflater.inflate(R.layout.fragment_login, container, false);
-        Button button = (Button)layout.findViewById(R.id.startMain);
+        Button kakaoTalkLoginbutton = (Button)layout.findViewById(R.id.KakaoLoginButton);
+        Button facebookLoginButton = (Button)layout.findViewById(R.id.FacebookLoginButton);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        kakaoTalkLoginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // kakaotalk 로그인 처리
+                startActivity(new Intent(getActivity() , MainActivity.class));
+                getFragmentManager().beginTransaction().remove(new LoginFragment());
+                getActivity().finish();
+            }
+        });
+
+        facebookLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // facebook 로그인 처리
                 startActivity(new Intent(getActivity() , MainActivity.class));
                 getFragmentManager().beginTransaction().remove(new LoginFragment());
                 getActivity().finish();

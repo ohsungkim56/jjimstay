@@ -29,14 +29,29 @@
         android:drawableLeft="@drawable/login_password_image"
         />
 
-    <Button
-        android:layout_marginBottom="30dp"
-        android:layout_width="310dp"
-        android:layout_height="60dp"
-        android:id="@+id/startMain"
-        android:layout_gravity="center|bottom"
-        android:background="@drawable/login_apibutton"
-        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom">
+
+        <Button
+            android:layout_marginBottom="30dp"
+            android:layout_width="155dp"
+            android:layout_height="60dp"
+            android:id="@+id/KakaoLoginButton"
+            android:background="@drawable/login_apibutton"
+            />
+
+        <Button
+            android:layout_marginBottom="30dp"
+            android:layout_width="155dp"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@id/KakaoLoginButton"
+            android:id="@+id/FacebookLoginButton"
+            />
+
+    </RelativeLayout>
+
 
 
 </FrameLayout>
