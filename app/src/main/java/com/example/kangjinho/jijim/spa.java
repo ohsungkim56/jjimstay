@@ -3,11 +3,26 @@ package com.example.kangjinho.jijim;
 /**
  * Created by Public on 2016-07-20.
  */
-public class DataList {
+public class Spa {
     private int backImage;
     private String name;
     private String price;
+    private String location;
 
+    public Spa(int backImage, String name, String price, String location) {
+        this.backImage = backImage;
+        this.name = name;
+        this.price = price;
+        this.location = location;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
     public String getName() {
         return name;

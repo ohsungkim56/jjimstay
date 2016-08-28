@@ -6,20 +6,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
+import com.example.kangjinho.jijim.Fragment.GPSFragment;
 import com.example.kangjinho.jijim.Fragment.MainFragment;
+import com.example.kangjinho.jijim.Fragment.SearchFragment;
 import com.example.kangjinho.jijim.R;
 
 
 public class MainActivity extends AppCompatActivity{
 
+    private long backKeyPressedTime = 0;
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
-        if(drawer.isDrawerOpen(Gravity.LEFT)){
+        if (drawer.isDrawerOpen(Gravity.LEFT)) {
             drawer.closeDrawer(Gravity.LEFT);
-        } else {
+        } else if (getFragmentManager().getBackStackEntryCount() > 0) {
             super.onBackPressed();
+        } else { // back stack is 0 -> exit
+            if (System.currentTimeMillis() - backKeyPressedTime > 1500) {
+                backKeyPressedTime = System.currentTimeMillis();
+                Toast.makeText(MainActivity.this, R.string.back_key_message, Toast.LENGTH_SHORT).show();
+            } else {
+                super.onBackPressed();
+            }
         }
     }
 
@@ -42,8 +54,7 @@ public class MainActivity extends AppCompatActivity{
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 프래그먼트 변경
-//                getFragmentManager().beginTransaction().replace(R.id.mainContainer, new SearchFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.mainContainer, new SearchFragment()).addToBackStack(null).commit();
             }
         });
 
@@ -51,8 +62,7 @@ public class MainActivity extends AppCompatActivity{
         GPSButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 프래그먼트 변경
-//                getFragmentManager().beginTransaction().replace(R.id.mainContainer, new GPSFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.mainContainer, new GPSFragment()).addToBackStack(null).commit();
             }
         });
 

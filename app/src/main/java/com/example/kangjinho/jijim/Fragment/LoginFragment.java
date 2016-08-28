@@ -20,8 +20,8 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View layout = inflater.inflate(R.layout.fragment_login, container, false);
-        Button kakaoTalkLoginbutton = (Button)layout.findViewById(R.id.KakaoLoginButton);
-        Button facebookLoginButton = (Button)layout.findViewById(R.id.FacebookLoginButton);
+        Button kakaoTalkLoginbutton = (Button) layout.findViewById(R.id.kakaoLoginButton);
+        Button facebookLoginButton = (Button) layout.findViewById(R.id.facebookLoginButton);
 
         kakaoTalkLoginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
