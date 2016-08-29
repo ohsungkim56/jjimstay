@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_tab_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -7,19 +9,19 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/search_tablayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:tabPaddingEnd="-1dp"
+        app:tabPaddingStart="-1dp">
 
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/selector_normal_search"
-            android:text="@string/normal_search" />
+            android:layout="@layout/search_tab_common" />
 
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/custom_search" />
-
+            android:layout="@layout/search_tab_custom" />
 
     </android.support.design.widget.TabLayout>
 

@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.kangjinho.jijim.Fragment.CommonSearchFragment;
 import com.example.kangjinho.jijim.Fragment.CustomSearchFragment;
-import com.example.kangjinho.jijim.Fragment.SimpleSearchFragment;
 
 /**
  * Created by jacob on 2016-08-28.
@@ -23,7 +23,7 @@ public class SearchViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new SimpleSearchFragment();
+                return new CommonSearchFragment();
             case 1:
                 return new CustomSearchFragment();
             default:

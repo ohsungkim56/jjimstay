@@ -12,10 +12,10 @@ import com.example.kangjinho.jijim.R;
 /**
  * Created by jacob on 2016-08-28.
  */
-public class SimpleSearchFragment extends Fragment {
+public class CommonSearchFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_simple_search, null);
+        return inflater.inflate(R.layout.fragment_common_search, null);
     }
 }

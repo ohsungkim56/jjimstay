@@ -23,10 +23,8 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_search, null);
         TabLayout tb = (TabLayout) layout.findViewById(R.id.search_tablayout);
+        tb.setSelectedTabIndicatorHeight(0); // indicator remove
         final ViewPager vp = (ViewPager) layout.findViewById(R.id.search_viewpager);
-
-//        tb.addTab(tb.newTab().setText(R.string.normal_search));
-//        tb.addTab(tb.newTab().setText(R.string.custom_search));
 
         SearchViewPagerAdapter adapter = new SearchViewPagerAdapter(((AppCompatActivity) getActivity()).getSupportFragmentManager(), tb.getTabCount());
         vp.setAdapter(adapter);
