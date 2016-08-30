@@ -33,7 +33,7 @@
         android:layout_alignStart="@+id/editText"
         android:layout_below="@+id/editText"
         android:layout_marginTop="30dp"
-        android:text="RECENT????? HOW"
+        android:text="- RECENT - "
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

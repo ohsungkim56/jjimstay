@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay.Acitivty;
+package com.jjimstay.Acitivty;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.kangjinho.jjimstay.Fragment.GPSFragment;
-import com.example.kangjinho.jjimstay.Fragment.InfoFragment;
-import com.example.kangjinho.jjimstay.Fragment.MainFragment;
-import com.example.kangjinho.jjimstay.Fragment.SearchFragment;
-import com.example.kangjinho.jjimstay.R;
-import com.example.kangjinho.jjimstay.Spa;
+import com.jjimstay.Fragment.GPSFragment;
+import com.jjimstay.Fragment.InfoFragment;
+import com.jjimstay.Fragment.MainFragment;
+import com.jjimstay.Fragment.SearchFragment;
+import com.jjimstay.R;
+import com.jjimstay.Spa;
 
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnSpaSelectedListener {
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnSp
             }
         }
     }
+
 
     @Override
     protected void onStart() {

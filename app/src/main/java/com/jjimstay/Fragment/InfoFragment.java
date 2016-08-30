@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay.Fragment;
+package com.jjimstay.Fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.kangjinho.jjimstay.R;
-import com.example.kangjinho.jjimstay.Spa;
+import com.jjimstay.R;
+import com.jjimstay.Spa;
 
 /**
  * Created by KangJinho on 2016-08-24.

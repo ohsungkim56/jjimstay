@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay.Fragment;
+package com.jjimstay.Fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;

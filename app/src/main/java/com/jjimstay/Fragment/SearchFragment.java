@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay.Fragment;
+package com.jjimstay.Fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.example.kangjinho.jjimstay.R;
-import com.example.kangjinho.jjimstay.SearchViewPagerAdapter;
+import com.jjimstay.R;
+import com.jjimstay.SearchViewPagerAdapter;
 
 /**
  * Created by jacob on 2016-08-28.

@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay.Fragment;
+package com.jjimstay.Fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
-import com.example.kangjinho.jjimstay.LanguageRecyclerViewAdapter;
-import com.example.kangjinho.jjimstay.R;
+import com.jjimstay.LanguageArrayAdapter;
+import com.jjimstay.R;
 
 /**
  * Created by KangJinho on 2016-08-22.
@@ -24,7 +24,7 @@ public class SplashFragment extends Fragment {
 
         String[] languages = getResources().getStringArray(R.array.language);
         mSpinner = (Spinner) layout.findViewById(R.id.spinnerLanguage);
-        LanguageRecyclerViewAdapter adapter = new LanguageRecyclerViewAdapter(getActivity().getApplicationContext(),R.layout.language_spinner_item,R.id.Language_Item_textView,languages,0);
+        LanguageArrayAdapter adapter = new LanguageArrayAdapter(getActivity().getApplicationContext(), R.layout.language_spinner_item, R.id.Language_Item_textView, languages, 0);
         mSpinner.setAdapter(adapter);
 
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

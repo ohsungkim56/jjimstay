@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay;
+package com.jjimstay;
 
 import org.junit.Test;
 

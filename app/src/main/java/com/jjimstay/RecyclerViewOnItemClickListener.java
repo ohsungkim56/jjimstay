@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay;
+package com.jjimstay;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

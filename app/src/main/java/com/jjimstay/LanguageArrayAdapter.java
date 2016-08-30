@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay;
+package com.jjimstay;
 
 import android.content.Context;
 import android.view.View;
@@ -8,10 +8,10 @@ import android.widget.ArrayAdapter;
 /**
  * Created by jacob on 2016-08-27.
  */
-public class LanguageRecyclerViewAdapter extends ArrayAdapter<String> {
+public class LanguageArrayAdapter extends ArrayAdapter<String> {
     private int hidingItem;
 
-    public LanguageRecyclerViewAdapter(Context context, int resource, int textViewResourceId, String[] objects, int hidingItem) {
+    public LanguageArrayAdapter(Context context, int resource, int textViewResourceId, String[] objects, int hidingItem) {
         super(context, resource, textViewResourceId, objects);
         this.hidingItem = hidingItem;
     }

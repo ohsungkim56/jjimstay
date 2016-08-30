@@ -1,10 +1,10 @@
-package com.example.kangjinho.jjimstay.Acitivty;
+package com.jjimstay.Acitivty;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.kangjinho.jjimstay.Fragment.SplashFragment;
-import com.example.kangjinho.jjimstay.R;
+import com.jjimstay.Fragment.SplashFragment;
+import com.jjimstay.R;
 
 public class SplashActivity extends AppCompatActivity {
 

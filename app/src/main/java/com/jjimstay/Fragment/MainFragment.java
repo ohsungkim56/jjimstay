@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay.Fragment;
+package com.jjimstay.Fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.kangjinho.jjimstay.R;
-import com.example.kangjinho.jjimstay.RecyclerViewAdapter;
-import com.example.kangjinho.jjimstay.RecyclerViewOnItemClickListener;
-import com.example.kangjinho.jjimstay.Spa;
+import com.jjimstay.R;
+import com.jjimstay.RecyclerViewAdapter;
+import com.jjimstay.RecyclerViewOnItemClickListener;
+import com.jjimstay.Spa;
 
 import java.util.LinkedList;
 import java.util.List;

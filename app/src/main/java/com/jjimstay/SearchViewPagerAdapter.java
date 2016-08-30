@@ -1,11 +1,11 @@
-package com.example.kangjinho.jjimstay;
+package com.jjimstay;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.kangjinho.jjimstay.Fragment.CommonSearchFragment;
-import com.example.kangjinho.jjimstay.Fragment.CustomSearchFragment;
+import com.jjimstay.Fragment.CommonSearchFragment;
+import com.jjimstay.Fragment.CustomSearchFragment;
 
 /**
  * Created by jacob on 2016-08-28.

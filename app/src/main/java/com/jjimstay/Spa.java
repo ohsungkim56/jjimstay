@@ -1,4 +1,4 @@
-package com.example.kangjinho.jjimstay;
+package com.jjimstay;
 
 import android.os.Parcel;
 import android.os.Parcelable;
