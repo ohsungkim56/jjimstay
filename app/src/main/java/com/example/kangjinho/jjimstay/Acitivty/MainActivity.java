@@ -1,4 +1,4 @@
-package com.example.kangjinho.jijim.Acitivty;
+package com.example.kangjinho.jjimstay.Acitivty;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -8,13 +8,15 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.kangjinho.jijim.Fragment.GPSFragment;
-import com.example.kangjinho.jijim.Fragment.MainFragment;
-import com.example.kangjinho.jijim.Fragment.SearchFragment;
-import com.example.kangjinho.jijim.R;
+import com.example.kangjinho.jjimstay.Fragment.GPSFragment;
+import com.example.kangjinho.jjimstay.Fragment.InfoFragment;
+import com.example.kangjinho.jjimstay.Fragment.MainFragment;
+import com.example.kangjinho.jjimstay.Fragment.SearchFragment;
+import com.example.kangjinho.jjimstay.R;
+import com.example.kangjinho.jjimstay.Spa;
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements MainFragment.OnSpaSelectedListener {
 
     private long backKeyPressedTime = 0;
 
@@ -36,14 +38,20 @@ public class MainActivity extends AppCompatActivity{
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        getFragmentManager().beginTransaction().add(R.id.mainContainer, new MainFragment()).commit();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         final DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
 
-        ImageButton navigationButton = (ImageButton)findViewById(R.id.navigationMenuButton);
-        navigationButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton sideBarButton = (ImageButton) findViewById(R.id.sideBarButton);
+        sideBarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 drawer.openDrawer(Gravity.LEFT);
@@ -65,8 +73,15 @@ public class MainActivity extends AppCompatActivity{
                 getFragmentManager().beginTransaction().replace(R.id.mainContainer, new GPSFragment()).addToBackStack(null).commit();
             }
         });
+    }
 
-        if (savedInstanceState == null)
-            getFragmentManager().beginTransaction().add(R.id.mainContainer, new MainFragment()).commit();
+    @Override
+    public void onSpaSelected(Spa spa) {
+        InfoFragment infoFragment = new InfoFragment();
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("SPA", spa);
+        infoFragment.setArguments(bundle);
+
+        getFragmentManager().beginTransaction().replace(R.id.mainContainer, infoFragment).addToBackStack(null).commit();
     }
 }

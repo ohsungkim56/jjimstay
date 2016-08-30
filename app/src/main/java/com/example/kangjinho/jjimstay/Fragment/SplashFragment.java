@@ -1,21 +1,15 @@
-package com.example.kangjinho.jijim.Fragment;
+package com.example.kangjinho.jjimstay.Fragment;
 
 import android.app.Fragment;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
-import com.example.kangjinho.jijim.LanguageRecyclerViewAdapter;
-import com.example.kangjinho.jijim.R;
-
-import java.util.Collection;
-import java.util.List;
+import com.example.kangjinho.jjimstay.LanguageRecyclerViewAdapter;
+import com.example.kangjinho.jjimstay.R;
 
 /**
  * Created by KangJinho on 2016-08-22.

@@ -1,4 +1,4 @@
-package com.example.kangjinho.jijim;
+package com.example.kangjinho.jjimstay;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

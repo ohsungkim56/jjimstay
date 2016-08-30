@@ -1,4 +1,4 @@
-package com.example.kangjinho.jijim;
+package com.example.kangjinho.jjimstay;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -40,9 +40,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //        holder.backImage.setBackgroundResource(R.drawable.card_image1);
         Spa item = mItems.get(position);
         holder.name.setText(item.getName());
-        holder.price.setText(Currency.getInstance(Locale.KOREA).getSymbol() + ' ' + item.getPrice() + " ~ ");
+        holder.price.setText(" " + Currency.getInstance(Locale.KOREA).getSymbol() + ' ' + item.getPrice() + " ~ ");
         holder.location.setText(item.getLocation());
-        holder.backImage.setBackgroundResource(item.getBackImage());
+        holder.backImage.setBackgroundResource(item.getBackGroundImage());
     }
 
     @Override

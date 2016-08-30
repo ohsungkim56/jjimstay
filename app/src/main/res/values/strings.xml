@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">JJIMSTAY</string>
-    <string name="search">Search</string>
 
     <string name="email">e-mail</string>
     <string name="password">password</string>
@@ -13,13 +12,34 @@
 
     <string name="common_search">Common Search</string>
     <string name="custom_search">Custom Search</string>
+    <string name="search">Search</string>
 
     <string name="back_key_message">Please click BACK again to exit</string>
+
+    <!-- Common Search / Editview's text -->
     <string name="search_hint">Search (ex.Dragon Hill Spa ...)</string>
 
-
+    <!-- Custom Search / Textview's text -->
     <string name="schedule_capital">SCHEDULE</string>
     <string name="location_capital">LOCATION</string>
     <string name="facility_capital">FACILITY</string>
     <string name="price_capital">PRICE</string>
+
+    <!-- Custom Search / Facility -->
+    <string name="fitness">fitness</string>
+    <string name="beauty">beauty</string>
+    <string name="PC">PC</string>
+    <string name="arcade">arcade</string>
+
+    <!--side bar-->
+    <string name="welcome">Welcome, </string>
+    <string name="favorite">favorite</string>
+    <string name="coupon">coupon</string>
+    <string name="phone_number">1588-7777</string>
+
+    <!--infofragment-->
+    <string name="review">review</string>
+    <string name="details">details</string>
+    <string name="share">share</string>
+
 </resources>

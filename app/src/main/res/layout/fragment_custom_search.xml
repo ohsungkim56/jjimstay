@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/schedule_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -20,22 +20,24 @@
         android:textStyle="bold" />
 
     <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
+        android:id="@+id/schedule_spinner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/schedule_textView"
         android:layout_margin="5dp"
-        android:background="@drawable/search_spinner_bg" />
+        android:background="@drawable/search_spinner_bg"
+        android:entries="@array/schedule"
+        android:padding="7dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/location_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/spinner2"
+        android:layout_below="@+id/schedule_spinner"
         android:text="@string/location_capital"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
@@ -45,29 +47,33 @@
         android:id="@+id/address_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/location_textView"
         android:orientation="horizontal"
         android:weightSum="2">
 
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
+            android:id="@+id/addr_spinner1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@drawable/search_spinner_bg" />
+            android:background="@drawable/search_spinner_bg"
+            android:entries="@array/location_add1"
+            android:padding="7dp" />
 
         <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="wrap_content"
+            android:id="@+id/addr_spinner2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@drawable/search_spinner_bg" />
+            android:background="@drawable/search_spinner_bg"
+            android:entries="@array/location_add2"
+            android:padding="7dp" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/facility_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/address_group"
@@ -80,51 +86,52 @@
         android:id="@+id/checkbox_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
+        android:layout_below="@+id/facility_textView"
         android:layout_margin="5dp"
         android:background="@drawable/search_spinner_bg"
         android:orientation="horizontal"
         android:weightSum="4">
 
         <CheckBox
-            android:id="@+id/checkBox1"
+            android:id="@+id/facility_fitness_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:padding="3dp"
-            android:text="New CheckBox" />
+            android:singleLine="false"
+            android:text="@string/fitness" />
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/facility_beauty_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:padding="3dp"
-            android:text="New CheckBox" />
+            android:text="@string/beauty" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/facility_PC_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:padding="3dp"
-            android:text="New CheckBox" />
+            android:text="@string/PC" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/facility_arcade_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:padding="3dp"
-            android:text="New CheckBox" />
+            android:text="@string/arcade" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/price_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/checkbox_group"
@@ -134,9 +141,10 @@
         android:textStyle="bold" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
+        android:layout_below="@+id/price_textView"
         android:layout_margin="5dp">
 
         <RelativeLayout
@@ -190,5 +198,18 @@
         </RelativeLayout>
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/custom_search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search_btn_bg"
+        android:text="@string/search"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
 </RelativeLayout>

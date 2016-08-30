@@ -1,4 +1,4 @@
-package com.example.kangjinho.jijim;
+package com.example.kangjinho.jjimstay;
 
 import android.content.Context;
 import android.view.View;

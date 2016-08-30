@@ -17,7 +17,7 @@
             android:background="@drawable/framgnet_actionbar_center">
 
             <ImageButton
-                android:id="@+id/navigationMenuButton"
+                android:id="@+id/sideBarButton"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
@@ -51,44 +51,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:background="#eeebeb">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@android:drawable/ic_menu_close_clear_cancel" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@android:drawable/ic_popup_reminder" />
-        </RelativeLayout>
-
 
     </LinearLayout>
-    <!--<ImageView-->
-    <!--android:id="@+id/content_frame"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_gravity="left"-->
-    <!--android:src="@android:drawable/presence_video_away" />-->
+
+
+    <include layout="@layout/sidebar"></include>
 
 </android.support.v4.widget.DrawerLayout>

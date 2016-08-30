@@ -10,8 +10,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
@@ -44,8 +42,8 @@
                         android:id="@+id/spinnerActive"
                         android:layout_width="120dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/spinner_active"
                         android:layout_gravity="center"
+                        android:background="@drawable/spinner_active"
                         android:entries="@array/Active"/>
                 </FrameLayout>
 
@@ -56,10 +54,5 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             </android.support.v7.widget.RecyclerView>
-
         </LinearLayout>
-
-
-
-
 </LinearLayout>

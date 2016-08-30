@@ -1,4 +1,4 @@
-package com.example.kangjinho.jijim.Fragment;
+package com.example.kangjinho.jjimstay.Fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.example.kangjinho.jijim.R;
-import com.example.kangjinho.jijim.SearchViewPagerAdapter;
+import com.example.kangjinho.jjimstay.R;
+import com.example.kangjinho.jjimstay.SearchViewPagerAdapter;
 
 /**
  * Created by jacob on 2016-08-28.
@@ -25,6 +25,7 @@ public class SearchFragment extends Fragment {
         TabLayout tb = (TabLayout) layout.findViewById(R.id.search_tablayout);
         tb.setSelectedTabIndicatorHeight(0); // indicator remove
         final ViewPager vp = (ViewPager) layout.findViewById(R.id.search_viewpager);
+
 
         SearchViewPagerAdapter adapter = new SearchViewPagerAdapter(((AppCompatActivity) getActivity()).getSupportFragmentManager(), tb.getTabCount());
         vp.setAdapter(adapter);

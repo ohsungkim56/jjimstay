@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:background="@drawable/info_fragment_item_bg"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/details_name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="spa name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/details_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_below="@id/details_name_textView"
+            android:background="@color/gray"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <TextView
+            android:id="@+id/details_rating_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details_divider"
+            android:text="4.0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/details_star_imgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details_divider"
+            android:layout_toRightOf="@+id/details_rating_textView" />
+
+        <TextView
+            android:id="@+id/details_etc_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details_rating_textView"
+            android:text="aaaaaaaaaaaaa"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </RelativeLayout>
+
+    <!--추후 mapView로 변경 예정-->
+    <!-- 추후에 map 추가시 margin 7dp -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:src="@drawable/map_test" />
+
+</LinearLayout>

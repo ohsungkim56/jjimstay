@@ -17,4 +17,25 @@
         <item>Active</item>
     </string-array>
 
+    <string-array name="schedule">
+        <item>test schedule1</item>
+        <item>test schedule2</item>
+        <item>test schedule3</item>
+        <item>test schedule4</item>
+    </string-array>
+
+    <string-array name="location_add1">
+        <item>Seoul</item>
+        <item>Gunggido</item>
+        <item>Daejeon</item>
+        <item>Busan</item>
+    </string-array>
+
+    <string-array name="location_add2">
+        <item>jung-gu</item>
+        <item>gangnam-gu</item>
+        <item>gangbuk-gu</item>
+        <item>No dab........</item>
+    </string-array>
+
 </resources>

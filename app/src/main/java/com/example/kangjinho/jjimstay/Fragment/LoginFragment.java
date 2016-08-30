@@ -1,4 +1,4 @@
-package com.example.kangjinho.jijim.Fragment;
+package com.example.kangjinho.jjimstay.Fragment;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.kangjinho.jijim.Acitivty.MainActivity;
-import com.example.kangjinho.jijim.R;
+import com.example.kangjinho.jjimstay.Acitivty.MainActivity;
+import com.example.kangjinho.jjimstay.R;
 
 /**
  * Created by KangJinho on 2016-08-22.
