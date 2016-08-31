@@ -37,13 +37,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnSp
         }
     }
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        getFragmentManager().beginTransaction().add(R.id.mainContainer, new MainFragment()).commit();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +67,8 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnSp
                 getFragmentManager().beginTransaction().replace(R.id.mainContainer, new GPSFragment()).addToBackStack(null).commit();
             }
         });
+
+        getFragmentManager().beginTransaction().replace(R.id.mainContainer, new MainFragment()).commit();
     }
 
     @Override

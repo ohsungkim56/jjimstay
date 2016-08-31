@@ -9,8 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.jjimstay.InfoViewPagerAdapter;
 import com.jjimstay.R;
 import com.jjimstay.Spa;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by KangJinho on 2016-08-24.
@@ -27,13 +31,21 @@ public class InfoFragment extends Fragment {
         try { // load Spa data
             Spa spa = getArguments().getParcelable("SPA");
 
-            ViewPager pager = (ViewPager) layout.findViewById(R.id.search_viewpager);
+            // 테스트 중....
+            ViewPager pager = (ViewPager) layout.findViewById(R.id.info_viewpager);
+            List<Integer> resources = new ArrayList<>();
+            resources.add(spa.getBackGroundImage());
+            resources.add(spa.getBackGroundImage());
+            resources.add(spa.getBackGroundImage());
+            InfoViewPagerAdapter adapter = new InfoViewPagerAdapter(resources, getActivity().getApplicationContext());
+            pager.setAdapter(adapter);
+
 
             //detail tab
-            TextView name_tv = (TextView) layout.findViewById(R.id.details_name_textView);
+            TextView nameTextView = (TextView) layout.findViewById(R.id.details_name_textView);
 //            TextView rating_tv = (TextView)layout.findViewById(R.id.details_rating_textView);
 //            ImageView rating_imgView = (ImageView)layout.findViewById(R.id.details_star_imgView);
-            name_tv.setText(spa.getName());
+            nameTextView.setText(spa.getName());
 
 
             return layout;
@@ -42,6 +54,5 @@ public class InfoFragment extends Fragment {
         } finally {
             return layout;
         }
-
     }
 }
