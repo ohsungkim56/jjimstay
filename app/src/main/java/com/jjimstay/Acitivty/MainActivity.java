@@ -12,11 +12,15 @@ import com.jjimstay.Fragment.GPSFragment;
 import com.jjimstay.Fragment.InfoFragment;
 import com.jjimstay.Fragment.MainFragment;
 import com.jjimstay.Fragment.SearchFragment;
+import com.jjimstay.Fragment.SearchResultFragment;
 import com.jjimstay.R;
 import com.jjimstay.Spa;
 
+import java.util.Date;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.OnSpaSelectedListener {
+
+public class MainActivity extends AppCompatActivity implements MainFragment.OnSpaSelectedListener, SearchResultFragment.OnSearchListener {
 
     private long backKeyPressedTime = 0;
 
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnSp
             }
         }
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,5 +84,25 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnSp
         infoFragment.setArguments(bundle);
 
         getFragmentManager().beginTransaction().replace(R.id.mainContainer, infoFragment).addToBackStack(null).commit();
+    }
+
+    @Override
+    public void onCommonSearch(String query) {
+        SearchResultFragment resultFragment = new SearchResultFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("QUERY", query);
+        resultFragment.setArguments(bundle);
+
+        getFragmentManager().beginTransaction().replace(R.id.mainContainer, resultFragment).addToBackStack(null).commit();
+    }
+
+    @Override
+    public void onCustomSearch(Date schedule, String addr1, String addr2, List<String> facility, String price) {
+        SearchResultFragment resultFragment = new SearchResultFragment();
+//        Bundle bundle = new Bundle();
+//        bundle.putParcelable("query", spa);
+//        resultFragment.setArguments(bundle);
+
+        getFragmentManager().beginTransaction().replace(R.id.mainContainer, resultFragment).addToBackStack(null).commit();
     }
 }

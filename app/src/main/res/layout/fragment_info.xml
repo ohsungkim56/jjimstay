@@ -10,49 +10,51 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <android.support.v4.view.ViewPager
-        android:id="@+id/info_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        app:layout_behavior="com.jjimstay.InfoFragmentHeaderBehavior" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:weightSum="3">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/info_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            app:layout_behavior="com.jjimstay.InfoFragmentHeaderBehavior" />
 
-        <Button
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_weight="1"
-            android:text="@string/details" />
+            android:weightSum="3">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:text="@string/review" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/details" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:text="@string/share" />
-    </LinearLayout>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/review" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/app_theme_color"
-        android:orientation="vertical">
-        <ScrollView
-            android:id="@+id/scrollView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/share" />
+        </LinearLayout>
 
-            <include layout="@layout/fragment_details"></include>
-        </ScrollView>
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_theme_color"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/fragment_details"></include>
+            </ScrollView>
+        </LinearLayout>
     </LinearLayout>
 
 
